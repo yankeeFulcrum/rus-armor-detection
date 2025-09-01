@@ -15,20 +15,20 @@ PLACEHOLDER
 git clone https://github.com/yankeeFulcrum/rus-armor-detection.git
 cd rus-armor-detection
 pip install ultralytics opencv-python torch torchvision
-wget https://github.com/yankeeFulcrum/rus-armor-detection/releases/download/v1.0/yolov8_armor.pt
+wget https://github.com/yankeeFulcrum/rus-armor-detection/releases/download/v0.0.1alpha/rus-armor-detectionv0.0.1-alpha.pt
 ```
 ## Usage
 To detect armored vehicles in a folder of images:
 
 ```bash
-python detect.py --weights yolov8_armor.pt --source ./your_images/
+python run.py ./yolov8_armor.pt ./your_images/
 ```
 To run detection on a video:
 
 ```bash
-python detect.py --weights yolov8_armor.pt --source ./demo_video.mp4
+python run.py ./yolov8_armor.pt ./demo_video.mp4
 ```
-Results will be saved in runs/detect/exp by default.
+Results will be saved in runs/detect by default.
 ## Dataset
 Training and test images were collected from open-source intelligence (OSINT) sources.  
 
