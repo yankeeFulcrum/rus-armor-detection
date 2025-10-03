@@ -10,11 +10,18 @@ Watch a short video of the model in action:
 ## Installation
 Clone the repository and install dependencies:
 
-PLACEHOLDER
 ```bash
 git clone https://github.com/yankeeFulcrum/rus-armor-detection.git
 cd rus-armor-detection
-pip install ultralytics opencv-python torch torchvision
+
+# virtual env
+python3 -m venv venv
+source venv/bin/activate
+
+# install dependencies
+pip install ultralytics opencv-python torch torchvision streamlit pillow
+
+# download pretrained weights
 wget https://github.com/yankeeFulcrum/rus-armor-detection/releases/download/v0.0.1alpha/rus-armor-detectionv0.0.1-alpha.pt
 ```
 ## Usage
@@ -29,6 +36,11 @@ To run detection on a video:
 python run.py ./yolov8_armor.pt ./demo_video.mp4
 ```
 Results will be saved in runs/detect by default.
+
+To launch the interactive web UI:
+```bash
+streamlit run app.py
+```
 ## Dataset
 Training and test images were collected from open-source intelligence (OSINT) sources.  
 
